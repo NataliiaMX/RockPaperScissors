@@ -187,7 +187,8 @@ MonoBehaviour:
   playerChoice_IMG: {fileID: 1279787202}
   computerChoice_IMG: {fileID: 1486107745}
   infoText: {fileID: 122882124}
-  rpsArray: []
+  animationController: {fileID: 36441304}
+  scoreCounter: {fileID: 2138104281}
 --- !u!1 &122882123
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,7 +544,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 333864947}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
-        m_MethodName: ToggleIsPressed
+        m_MethodName: DoWhenClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -603,6 +604,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc158b3942a2d5489fea1a89e14727c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationController: {fileID: 36441304}
+  gameplayController: {fileID: 36441307}
 --- !u!1 &465604086
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,7 +691,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 465604091}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
-        m_MethodName: ToggleIsPressed
+        m_MethodName: DoWhenClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -748,6 +751,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc158b3942a2d5489fea1a89e14727c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationController: {fileID: 36441304}
+  gameplayController: {fileID: 36441307}
 --- !u!1 &487631268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,7 +1126,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1033218145}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
-        m_MethodName: ToggleIsPressed
+        m_MethodName: DoWhenClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1181,6 +1186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc158b3942a2d5489fea1a89e14727c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationController: {fileID: 36441304}
+  gameplayController: {fileID: 36441307}
 --- !u!1 &1205141760
 GameObject:
   m_ObjectHideFlags: 0

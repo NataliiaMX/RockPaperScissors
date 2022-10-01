@@ -1,32 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Button : MonoBehaviour
 {
-    AnimationController animationController;
-    GameplayController gameplayController;
-    bool isPressed = false;
-    string choiceTag;
+    [SerializeField] private AnimationController _animationController;
+    [SerializeField] private GameplayController _gameplayController;
+    private string choiceTag;
 
-    private void Start() 
+    public void DoWhenClicked()
     {
-        animationController = FindObjectOfType<AnimationController>();
-        gameplayController = FindObjectOfType<GameplayController>();
-    }
-    private void Update() 
-    {
-        if (isPressed)
-        {
-            choiceTag = transform.tag;
-            gameplayController.SetChoices(choiceTag);
-            animationController.HandlePlayerChoice();
-            isPressed = false;
-        }
-    }
-
-    public void ToggleIsPressed ()
-    {
-        isPressed = true;
+        choiceTag = transform.tag;
+        _gameplayController.SetChoices(choiceTag);
+        _animationController.HandlePlayerChoice();
     }
 }

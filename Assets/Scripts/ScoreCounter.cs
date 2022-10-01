@@ -5,19 +5,20 @@ using TMPro;
 
 public class ScoreCounter : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI playerScoreText, computerScoreText;
-    int playerScore = 0;
-    int computerScore = 0;
+    [SerializeField] private TextMeshProUGUI _playerScoreText;
+    [SerializeField] private TextMeshProUGUI _computerScoreText;
+    private int playerScore;
+    private int computerScore;
 
-    public void IncreasePlayerScore ()
+    public void IncreasePlayerScore()
     {
         playerScore++;
-        playerScoreText.text = playerScore.ToString();
+        _playerScoreText.text = playerScore.ToString();
     }
 
-    public void IncreaseComputerScore ()
+    public void IncreaseComputerScore()
     {
         computerScore++;
-        computerScoreText.text = computerScore.ToString();
+        _computerScoreText.text = computerScore.ToString();
     }
 }

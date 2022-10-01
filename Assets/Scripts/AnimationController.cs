@@ -2,20 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class AnimationController : MonoBehaviour
 {
-   [SerializeField] Animator playerChoiceAnimator, desicionAnimator;
+   [SerializeField] private Animator _playerChoiceAnimator;
+   [SerializeField] private Animator _desicionAnimator;
+   private string showHandler = "ShowHandler";
+   private string removeChoices = "RemoveChoices";
+   private string removeHandler = "RemoveHandler";
+   private string showChoices = "ShowChoices";
 
-   public void RestartAnimations ()
+   public void RestartAnimations()
    {
-        playerChoiceAnimator.Play("ShowHandler");
-        desicionAnimator.Play("RemoveChoices");
+        _playerChoiceAnimator.Play(showHandler);
+        _desicionAnimator.Play(removeChoices);
    }
 
-   public void HandlePlayerChoice ()
+   public void HandlePlayerChoice()
    {
-        playerChoiceAnimator.Play("RemoveHandler");
-        desicionAnimator.Play("ShowChoices");
+        _playerChoiceAnimator.Play(removeHandler);
+        _desicionAnimator.Play(showChoices);
    }
 }
