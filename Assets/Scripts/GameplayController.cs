@@ -100,7 +100,7 @@ public class GameplayController : MonoBehaviour
     private void HandleWin()
     {
         _infoText.text = "You win!";
-        StartCoroutine("DisplayWinnerAndRestart");
+        StartCoroutine(DisplayWinnerAndRestart());
         _scoreCounter.IncreasePlayerScore();
     }
 
@@ -114,6 +114,6 @@ public class GameplayController : MonoBehaviour
     private void HandleTie()
     {
         _infoText.text = "It's a tie!";
-        StartCoroutine("DisplayWinnerAndRestart");
+        StartCoroutine(DisplayWinnerAndRestart());
     }
 }
